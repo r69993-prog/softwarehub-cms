@@ -2,6 +2,15 @@ import json
 import math
 import shutil
 from pathlib import Path
+
+
+import sys
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(BASE_DIR))
+
+
+
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 from jinja2 import Environment, FileSystemLoader
