@@ -1,0 +1,25 @@
+{
+  "site": {
+    "name": "SoftwareHub",
+    "url": "https://softwarehub.example.com",
+    "language": "th",
+    "author": "SoftwareHub Team",
+    "copyright": "© 2026 SoftwareHub"
+  },
+
+  "seo": {
+    "title": "SoftwareHub - ดาวน์โหลดโปรแกรมฟรี",
+    "description": "เว็บไซต์รวมโปรแกรมฟรี ดาวน์โหลดจากเว็บไซต์ทางการ พร้อมข้อมูล เวอร์ชัน และรายละเอียดโปรแกรม",
+    "keywords": [
+      "software",
+      "download",
+      "windows",
+      "freeware",
+      "opensource"
+    ]
+  },
+
+  "build": {
+    "items_per_page": 10
+  }
+}

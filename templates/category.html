@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ category }}</h2>
+
+<div class="software-list">
+
+{% for item in software %}
+
+{% set slug =
+item.name
+.lower()
+.replace(" ", "")
+.replace("+", "plus")
+.replace("-", "")
+%}
+
+<div class="software-card">
+
+    {% if item.image %}
+
+    <img
+        class="software-image"
+        src="images/{{ item.image }}"
+        alt="{{ item.name }}">
+
+    {% endif %}
+
+    <div class="software-content">
+
+        <h3>
+
+            <a href="{{ slug }}.html">
+
+                {{ item.name }}
+
+            </a>
+
+        </h3>
+
+        <div class="version">
+
+            Version {{ item.version }}
+
+        </div>
+
+        <p>
+
+            {{ item.description }}
+
+        </p>
+
+        <div class="software-footer">
+
+            <span class="category">
+
+                {{ item.category }}
+
+            </span>
+
+            <a
+                class="button"
+                href="{{ slug }}.html">
+
+                View Details
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

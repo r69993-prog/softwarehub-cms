@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<nav class="breadcrumb">
+
+<a href="index.html">Home</a>
+
+<span>›</span>
+
+<a href="{{ software.category.lower().replace(' ','') }}.html">
+
+{{ software.category }}
+
+</a>
+
+<span>›</span>
+
+<span>{{ software.name }}</span>
+
+</nav>
+
+<div class="article-page">
+
+<div class="ad-banner">
+
+<!-- Google AdSense In Article Top -->
+
+</div>
+
+<div class="article-header">
+
+{% if software.image %}
+
+<img
+class="article-image"
+src="images/{{ software.image }}"
+loading="lazy"
+alt="{{ software.name }}">
+
+{% endif %}
+
+<div class="article-info">
+
+<h2>{{ software.name }}</h2>
+
+<div class="version">
+
+Version {{ software.version }}
+
+</div>
+
+<div class="category">
+
+{{ software.category }}
+
+</div>
+
+<table class="software-meta">
+
+<tr><th>Developer</th><td>{{ software.developer }}</td></tr>
+<tr><th>License</th><td>{{ software.license }}</td></tr>
+<tr><th>Operating System</th><td>{{ software.os }}</td></tr>
+<tr><th>File Size</th><td>{{ software.size }}</td></tr>
+<tr><th>Last Updated</th><td>{{ software.last_updated }}</td></tr>
+<tr><th>Rating</th><td>⭐ {{ software.rating }}/5</td></tr>
+
+</table>
+
+<p>
+
+{{ software.description }}
+
+</p>
+
+<p>
+
+<a
+class="button"
+href="{{ software.download_url }}"
+target="_blank"
+rel="noopener noreferrer">
+
+Download Official
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<div class="ad-banner">
+
+<!-- Google AdSense In Article Middle -->
+
+</div>
+
+{% if related %}
+
+<h2>Related Software</h2>
+
+<div class="software-list">
+
+{% for item in related %}
+
+{% if item.category == software.category %}
+
+{% set slug=item.name.lower().replace(" ","").replace("+","plus").replace("-","") %}
+
+<div class="software-card">
+
+{% if item.image %}
+
+<img
+class="software-image"
+src="images/{{ item.image }}"
+loading="lazy"
+alt="{{ item.name }}">
+
+{% endif %}
+
+<div class="software-content">
+
+<h3>
+
+<a href="{{ slug }}.html">
+
+{{ item.name }}
+
+</a>
+
+</h3>
+
+<div class="version">
+
+Version {{ item.version }}
+
+</div>
+
+<p>
+
+{{ item.description }}
+
+</p>
+
+<div class="software-footer">
+
+<span class="category">
+
+{{ item.category }}
+
+</span>
+
+<a
+class="button"
+href="{{ slug }}.html">
+
+View Details
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endif %}
+
+{% endfor %}
+
+</div>
+
+{% endif %}
+
+<div class="ad-banner">
+
+<!-- Google AdSense In Article Bottom -->
+
+</div>
+
+<p style="margin-top:30px;">
+
+<a
+class="button"
+href="index.html">
+
+← Back to Home
+
+</a>
+
+</p>
+
+</div>
+
+{% endblock %}

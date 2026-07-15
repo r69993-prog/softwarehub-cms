@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="{{ site.site.language }}">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{ title }}</title>
+
+<meta name="description" content="{{ site.seo.description }}">
+<meta name="keywords" content="{{ site.seo.keywords|join(', ') }}">
+<meta name="author" content="{{ site.site.author }}">
+<meta name="robots" content="index,follow">
+
+<link rel="canonical" href="{{ site.site.url }}/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ site.seo.description }}">
+<meta property="og:url" content="{{ site.site.url }}">
+<meta property="og:site_name" content="{{ site.site.name }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ site.seo.description }}">
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"{{ site.site.name }}",
+ "url":"{{ site.site.url }}",
+ "potentialAction":{
+   "@type":"SearchAction",
+   "target":"{{ site.site.url }}/?q={search_term_string}",
+   "query-input":"required name=search_term_string"
+ }
+}
+</script>
+
+<link rel="alternate"
+      type="application/rss+xml"
+      title="{{ site.site.name }}"
+      href="feed.xml">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="container header-top">
+
+<div>
+
+<h1 class="logo">
+
+<a href="index.html">
+
+{{ site.site.name }}
+
+</a>
+
+</h1>
+
+<p class="tagline">
+
+Download Free Software
+
+</p>
+
+</div>
+
+<div style="display:flex;gap:10px;align-items:center;">
+
+<div class="search-box">
+
+<input
+id="searchInput"
+type="text"
+placeholder="Search software...">
+
+</div>
+
+<button
+id="themeToggle"
+class="button"
+type="button">
+
+🌙
+
+</button>
+
+</div>
+
+</div>
+
+<nav class="navbar">
+
+<a href="index.html">Home</a>
+<a href="utilities.html">Utilities</a>
+<a href="developer.html">Developer</a>
+<a href="browser.html">Browser</a>
+<a href="multimedia.html">Multimedia</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="ad-banner">
+
+<!-- Google AdSense Top Banner -->
+
+</div>
+
+</div>
+
+<main class="container">
+
+{% block content %}
+{% endblock %}
+
+</main>
+
+<div class="container">
+
+<div class="ad-banner">
+
+<!-- Google AdSense Bottom Banner -->
+
+</div>
+
+</div>
+
+<footer>
+
+<div class="container">
+
+<p>{{ site.site.copyright }}</p>
+
+<p style="margin-top:10px;">
+
+<a href="feed.xml">RSS Feed</a>
+
+</p>
+
+</div>
+
+</footer>
+
+<script>
+
+const input=document.getElementById("searchInput");
+
+if(input){
+
+input.addEventListener("keyup",function(){
+
+const keyword=this.value.toLowerCase();
+
+document.querySelectorAll(".software-card").forEach(card=>{
+
+card.style.display=
+card.innerText.toLowerCase().includes(keyword)
+?"":"none";
+
+});
+
+});
+
+}
+
+const btn=document.getElementById("themeToggle");
+
+if(localStorage.getItem("theme")==="dark"){
+
+document.body.classList.add("dark");
+
+btn.textContent="☀️";
+
+}
+
+btn.onclick=function(){
+
+document.body.classList.toggle("dark");
+
+const dark=document.body.classList.contains("dark");
+
+localStorage.setItem("theme",dark?"dark":"light");
+
+btn.textContent=dark?"☀️":"🌙";
+
+};
+
+</script>
+
+</body>
+</html>

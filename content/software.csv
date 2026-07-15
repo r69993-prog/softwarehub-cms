@@ -1,0 +1,16 @@
+name,version,category,developer,license,os,size,last_updated,rating,description,download_url,image
+Notepad++,8.8.6,Utilities,Don Ho,GPL v3,Windows,5.9 MB,2026-06-30,4.9,Free source code editor for Windows.,https://notepad-plus-plus.org/downloads/,notepadplusplus.png
+7-Zip,24.09,Utilities,Igor Pavlov,LGPL,Windows,1.6 MB,2026-06-15,4.9,Free file archiver.,https://www.7-zip.org/,7zip.png
+VLC Media Player,3.0.21,Multimedia,VideoLAN,GPL v2+,Windows macOS Linux,42 MB,2026-05-20,4.9,Free multimedia player.,https://www.videolan.org/,vlc.png
+Visual Studio Code,1.101,Developer,Microsoft,Freeware,Windows macOS Linux,102 MB,2026-07-01,4.8,Code editor from Microsoft.,https://code.visualstudio.com/,vscode.png
+Google Chrome,138,Browser,Google,Freeware,Windows macOS Linux,115 MB,2026-07-05,4.8,Fast web browser.,https://www.google.com/chrome/,chrome.png
+Mozilla Firefox,141,Browser,Mozilla,MPL 2.0,Windows macOS Linux,67 MB,2026-07-01,4.8,Open-source web browser.,https://www.mozilla.org/firefox/,firefox.png
+Opera,120,Browser,Opera,Freeware,Windows macOS Linux,110 MB,2026-06-28,4.6,Fast browser with built-in VPN.,https://www.opera.com/,opera.png
+Brave Browser,1.80,Browser,Brave Software,MPL 2.0,Windows macOS Linux,115 MB,2026-07-03,4.8,Privacy-focused web browser.,https://brave.com/,brave.png
+WinRAR,7.12,Utilities,RARLAB,Trialware,Windows,3.8 MB,2026-06-22,4.7,Popular archive manager.,https://www.win-rar.com/,winrar.png
+PeaZip,10.5,Utilities,Giorgio Tani,LGPL,Windows Linux,11 MB,2026-06-18,4.7,Open-source archive utility.,https://peazip.github.io/,peazip.png
+GIMP,3.0,Graphics,GIMP Team,GPL v3,Windows macOS Linux,320 MB,2026-06-20,4.7,Free image editor.,https://www.gimp.org/,gimp.png
+Inkscape,1.4,Graphics,Inkscape Project,GPL v2,Windows macOS Linux,95 MB,2026-06-25,4.7,Vector graphics editor.,https://inkscape.org/,inkscape.png
+Audacity,3.7,Multimedia,Audacity Team,GPL v3,Windows macOS Linux,35 MB,2026-06-26,4.8,Free audio editor.,https://www.audacityteam.org/,audacity.png
+OBS Studio,31.1,Multimedia,OBS Project,GPL v2,Windows macOS Linux,140 MB,2026-07-02,4.9,Video recording and live streaming.,https://obsproject.com/,obs.png
+HandBrake,1.9,Multimedia,HandBrake Team,GPL v2,Windows macOS Linux,28 MB,2026-06-21,4.8,Open-source video transcoder.,https://handbrake.fr/,handbrake.png
